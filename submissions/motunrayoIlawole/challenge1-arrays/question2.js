@@ -1,26 +1,18 @@
-function solution (nums, target) {
-    let currentNum;
-    let output = [];
+function solution(nums, target) {
+    // loop through the numbers in the array to get the current number
     for (let i = 0; i < nums.length; i++) {
-        currentNum = nums[i];
-        let diff = target - currentNum;
 
-
-        if (nums.indexOf(diff) !== -1 && nums.indexOf(diff) !== nums.indexOf(currentNum)) {
-            output.push(nums.indexOf(currentNum), nums.indexOf(diff));
-            break;
-        }
-        if (nums.indexOf(diff) !== -1 && nums.indexOf(diff) === nums.indexOf(currentNum)) {
-            if (nums.indexOf(currentNum) !== nums.lastIndexOf(diff)) {
-                output.push(nums.indexOf(currentNum), nums.lastIndexOf(diff));
-                break;
+        // loop through the numbers in the array to get the numbers after the current number
+        for (let j = i + 1; j < nums.length; j++) {
+            // if the current number and one of the numbers after it add up to the target number, return their indices
+            if (nums[i] + nums[j] === target) {
+                return [i, j]
             }
-
         }
-
     }
-
-    return output;
 }
 
-console.log(solution([1, 2, 9, 6], 10));
+console.log(solution([2, 7, 11, 15], 9));
+
+// Time complexity - O(n2)
+// Space complexity - O(1)
