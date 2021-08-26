@@ -1,4 +1,4 @@
-function findMissingNo(arr, n) {
+function findSmallestPositive(arr, n) {
   // to store current array element
   var val;
 
@@ -43,9 +43,9 @@ function findMissingNo(arr, n) {
   return n + 1;
 }
 
-var arr = [2, 3, 7, 6, 8, -1, -10, 15];
+var arr = [7, 8, 9, 11, 12];
 var arr_size = arr.length;
-var missing = findMissingNo(arr, arr_size);
+var missing = findSmallestPositive(arr, arr_size);
 console.log("The smallest positive missing number is " + missing);
 
 // Time Complexity: O(n)
