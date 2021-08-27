@@ -1,4 +1,4 @@
-const getLongestCommonPrefix = (arr) => {
+const getLongestCommonPrefixes = (arr) => {
   const [first, ...others] = arr;
   let prefix = "";
   for (let i = 0; i < first.length; i++) {
@@ -18,4 +18,4 @@ const getLongestCommonPrefix = (arr) => {
   return prefix;
 };
 
-console.log(getLongestCommonPrefix(["chair", "cheese", "church"]));
+console.log(getLongestCommonPrefixes(["chair", "cheese", "church"]));
