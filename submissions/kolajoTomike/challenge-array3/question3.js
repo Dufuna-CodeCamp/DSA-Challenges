@@ -1,4 +1,4 @@
-const getSmallestIntegers = (arr) => {
+const getSmallestInteger = (arr) => {
   const num2 = arr.sort((num1, num2) => num1 - num2);
   for (i in num2) {
     if (+i !== num2[i] && +i !== 0) {
@@ -8,4 +8,4 @@ const getSmallestIntegers = (arr) => {
   return arr.length;
 };
 
-console.log(getSmallestIntegers([7, 8, 9, 11, 12]));
+console.log(getSmallestInteger([7, 8, 9, 11, 12]));
